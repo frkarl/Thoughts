@@ -22,6 +22,13 @@
 		086343E51933E0320038570D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086343C41933E0320038570D /* UIKit.framework */; };
 		086343ED1933E0320038570D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 086343EB1933E0320038570D /* InfoPlist.strings */; };
 		086343EF1933E0320038570D /* ThoughtsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 086343EE1933E0320038570D /* ThoughtsTests.m */; };
+		086343F91933E0EB0038570D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086343F81933E0EB0038570D /* CoreData.framework */; };
+		086343FC1933E1530038570D /* Thoughts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 086343FA1933E1530038570D /* Thoughts.xcdatamodeld */; };
+		086344011933E21F0038570D /* FKLForcesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086343FE1933E21F0038570D /* FKLForcesController.m */; };
+		086344021933E21F0038570D /* FKLAddForceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086344001933E21F0038570D /* FKLAddForceController.m */; };
+		086344061933EC690038570D /* Force.m in Sources */ = {isa = PBXBuildFile; fileRef = 086344051933EC690038570D /* Force.m */; };
+		086344091933EC880038570D /* Discussion.m in Sources */ = {isa = PBXBuildFile; fileRef = 086344081933EC880038570D /* Discussion.m */; };
+		0863440D19353A860038570D /* FKLDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0863440C19353A860038570D /* FKLDataHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +63,18 @@
 		086343EA1933E0320038570D /* ThoughtsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThoughtsTests-Info.plist"; sourceTree = "<group>"; };
 		086343EC1933E0320038570D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		086343EE1933E0320038570D /* ThoughtsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThoughtsTests.m; sourceTree = "<group>"; };
+		086343F81933E0EB0038570D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		086343FB1933E1530038570D /* Thoughts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Thoughts.xcdatamodel; sourceTree = "<group>"; };
+		086343FD1933E21F0038570D /* FKLForcesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLForcesController.h; sourceTree = "<group>"; };
+		086343FE1933E21F0038570D /* FKLForcesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLForcesController.m; sourceTree = "<group>"; };
+		086343FF1933E21F0038570D /* FKLAddForceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLAddForceController.h; sourceTree = "<group>"; };
+		086344001933E21F0038570D /* FKLAddForceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLAddForceController.m; sourceTree = "<group>"; };
+		086344041933EC690038570D /* Force.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Force.h; sourceTree = "<group>"; };
+		086344051933EC690038570D /* Force.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Force.m; sourceTree = "<group>"; };
+		086344071933EC880038570D /* Discussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Discussion.h; sourceTree = "<group>"; };
+		086344081933EC880038570D /* Discussion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Discussion.m; sourceTree = "<group>"; };
+		0863440B19353A860038570D /* FKLDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLDataHandler.h; sourceTree = "<group>"; };
+		0863440C19353A860038570D /* FKLDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLDataHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086343F91933E0EB0038570D /* CoreData.framework in Frameworks */,
 				086343C31933E0320038570D /* CoreGraphics.framework in Frameworks */,
 				086343C51933E0320038570D /* UIKit.framework in Frameworks */,
 				086343C11933E0320038570D /* Foundation.framework in Frameworks */,
@@ -104,6 +124,7 @@
 		086343BF1933E0320038570D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				086343F81933E0EB0038570D /* CoreData.framework */,
 				086343C01933E0320038570D /* Foundation.framework */,
 				086343C21933E0320038570D /* CoreGraphics.framework */,
 				086343C41933E0320038570D /* UIKit.framework */,
@@ -115,6 +136,8 @@
 		086343C61933E0320038570D /* Thoughts */ = {
 			isa = PBXGroup;
 			children = (
+				0863440A1933EC910038570D /* DataModels */,
+				086344031933E2A50038570D /* Controllers */,
 				086343CF1933E0320038570D /* FKLAppDelegate.h */,
 				086343D01933E0320038570D /* FKLAppDelegate.m */,
 				086343D21933E0320038570D /* Main.storyboard */,
@@ -122,8 +145,11 @@
 				086343D61933E0320038570D /* FKLFirstViewController.m */,
 				086343D81933E0320038570D /* FKLSecondViewController.h */,
 				086343D91933E0320038570D /* FKLSecondViewController.m */,
+				086343FA1933E1530038570D /* Thoughts.xcdatamodeld */,
 				086343DB1933E0320038570D /* Images.xcassets */,
 				086343C71933E0320038570D /* Supporting Files */,
+				0863440B19353A860038570D /* FKLDataHandler.h */,
+				0863440C19353A860038570D /* FKLDataHandler.m */,
 			);
 			path = Thoughts;
 			sourceTree = "<group>";
@@ -155,6 +181,28 @@
 				086343EB1933E0320038570D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		086344031933E2A50038570D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				086343FD1933E21F0038570D /* FKLForcesController.h */,
+				086343FE1933E21F0038570D /* FKLForcesController.m */,
+				086343FF1933E21F0038570D /* FKLAddForceController.h */,
+				086344001933E21F0038570D /* FKLAddForceController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0863440A1933EC910038570D /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				086344071933EC880038570D /* Discussion.h */,
+				086344081933EC880038570D /* Discussion.m */,
+				086344041933EC690038570D /* Force.h */,
+				086344051933EC690038570D /* Force.m */,
+			);
+			name = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086343FC1933E1530038570D /* Thoughts.xcdatamodeld in Sources */,
+				086344061933EC690038570D /* Force.m in Sources */,
 				086343DA1933E0320038570D /* FKLSecondViewController.m in Sources */,
+				086344011933E21F0038570D /* FKLForcesController.m in Sources */,
 				086343D11933E0320038570D /* FKLAppDelegate.m in Sources */,
 				086343CD1933E0320038570D /* main.m in Sources */,
+				0863440D19353A860038570D /* FKLDataHandler.m in Sources */,
 				086343D71933E0320038570D /* FKLFirstViewController.m in Sources */,
+				086344091933EC880038570D /* Discussion.m in Sources */,
+				086344021933E21F0038570D /* FKLAddForceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +527,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		086343FA1933E1530038570D /* Thoughts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				086343FB1933E1530038570D /* Thoughts.xcdatamodel */,
+			);
+			currentVersion = 086343FB1933E1530038570D /* Thoughts.xcdatamodel */;
+			path = Thoughts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 086343B51933E0320038570D /* Project object */;
 }

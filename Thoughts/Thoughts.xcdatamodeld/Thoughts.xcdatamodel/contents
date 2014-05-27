@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Discussion" representedClassName="Discussion" syncable="YES">
+        <attribute name="discussion" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Force" representedClassName="Force" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Force" positionX="-855" positionY="-1458" width="128" height="73"/>
+        <element name="Discussion" positionX="-1026" positionY="-1458" width="128" height="58"/>
+    </elements>
+</model>
