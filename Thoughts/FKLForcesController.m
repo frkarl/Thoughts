@@ -23,11 +23,7 @@
 {
     [super viewDidLoad];
 	
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Force" inManagedObjectContext:managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSError *error;
-    self.forces = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    [self performFetch];
     
     //[self setupFetchedResultsController];
 }
@@ -72,8 +68,8 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == actionSheet.destructiveButtonIndex) {
-        //[FKDataHandler clearData:self.managedObjectContext];
-        //[self performFetch];
+        [FKLDataHandler clearData:self.managedObjectContext];
+        [self performFetch];
         [self.tableView reloadData];
     }
 }
@@ -133,8 +129,19 @@
 - (void)addForceControllerDidSave:(FKLAddForceController *)controller
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
-    //[self performFetch];
+    [self performFetch];
     [self.tableView reloadData];
+}
+
+#pragma mark - Unsorted
+
+- (void)performFetch
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Force" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    self.forces = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
 }
 
 @end

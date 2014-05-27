@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "Force.h"
+#import "Force.h"
 
 @class FKLAddForceController;
 

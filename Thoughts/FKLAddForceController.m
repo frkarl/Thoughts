@@ -38,10 +38,10 @@
 {
     if ([forceTextField.text length] > 0)
     {
-        //Force *force = [NSEntityDescription insertNewObjectForEntityForName:@"Force" inManagedObjectContext:self.managedObjectContext];
+        Force *force = [NSEntityDescription insertNewObjectForEntityForName:@"Force" inManagedObjectContext:self.managedObjectContext];
     
-        //force.strDescription = forceTextField.text;
-        //force.intForceType = [NSNumber numberWithUnsignedInteger:selectedForceType];
+        force.text = forceTextField.text;
+        force.type = [NSNumber numberWithUnsignedInteger:selectedForceType];
         [self.managedObjectContext save:nil];
 	}
     [self.delegate addForceControllerDidSave:self];
