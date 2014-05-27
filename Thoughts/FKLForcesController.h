@@ -12,9 +12,8 @@
 #import "Force.h"
 #import "FKLDataHandler.h"
 
-@interface FKLForcesController : UITableViewController <FKLAddForceControllerDelegate,UIActionSheetDelegate> //<NSFetchedResultsControllerDelegate> //CoreDataTableViewController <FKAddForceControllerDelegate,UIActionSheetDelegate>
+@interface FKLForcesController : UITableViewController <FKLAddForceControllerDelegate,UIActionSheetDelegate>
 
-//@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSArray *forces;
 

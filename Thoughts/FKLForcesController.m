@@ -15,7 +15,6 @@
 
 @implementation FKLForcesController
 
-//@synthesize fetchedResultsController;
 @synthesize managedObjectContext;
 @synthesize forces;
 
@@ -24,8 +23,6 @@
     [super viewDidLoad];
 	
     [self performFetch];
-    
-    //[self setupFetchedResultsController];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,14 +42,6 @@
         addForceController.managedObjectContext = self.managedObjectContext;
 	}
 }
-
-/*
-- (void)setupFetchedResultsController
-{
-    //self.fetchedResultsController = [FKDataHandler fetchFilter:self.managedObjectContext withFetchController:self.fetchedResultsController onTable:@"Force" withSort:@"intForceType"];
-    //[self performFetch];
-}
- */
 
 -(void)clear:(id)sender
 {
@@ -80,7 +69,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ForceCell"];
     
-    Force *force = [self.forces objectAtIndex:indexPath.row]; //[self.fetchedResultsController objectAtIndexPath:indexPath];
+    Force *force = [self.forces objectAtIndex:indexPath.row];
     UILabel *descriptionLabel = (UILabel *)[cell viewWithTag:100];
 	descriptionLabel.text = force.text;
     UIImageView * forceTypeImageView = (UIImageView *)[cell viewWithTag:101];
@@ -103,21 +92,19 @@
 	return nil;
 }
 
-/*
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (editingStyle == UITableViewCellEditingStyleDelete)
 	{
-		//NSManagedObject *eventToDelete =[self.fetchedResultsController objectAtIndexPath:indexPath];
-        //[self.managedObjectContext deleteObject:eventToDelete];
+		Force *force = [self.forces objectAtIndex:indexPath.row];
+        [self.managedObjectContext deleteObject:force];
         NSError *error = nil;
         if ([self.managedObjectContext save:&error]) {
-            //[self performFetch];
+            [self performFetch];
             [self.tableView reloadData];
         }
     }
 }
- */
 
 #pragma mark - FKAddForceControllerDelegate
 

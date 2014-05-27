@@ -517,6 +517,7 @@
 				086343F41933E0320038570D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		086343F51933E0320038570D /* Build configuration list for PBXNativeTarget "ThoughtsTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +526,7 @@
 				086343F71933E0320038570D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
