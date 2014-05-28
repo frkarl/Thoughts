@@ -189,7 +189,7 @@
                             <constraint firstAttribute="centerY" secondItem="DcM-Fx-MKR" secondAttribute="centerY" id="lHZ-e8-ii2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="Discussion" image="discussion" id="Z7h-1E-pvt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,8 +206,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                         <segue destination="FBW-CN-Gg4" kind="relationship" relationship="viewControllers" id="Wuv-rr-gRd"/>
+                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -218,7 +218,7 @@
         <scene sceneID="hPS-SH-YJ3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FBW-CN-Gg4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Thoughts" id="EwX-XU-DPw"/>
+                    <tabBarItem key="tabBarItem" title="Thoughts" image="force" id="EwX-XU-DPw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PWV-D1-SoX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -253,7 +253,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
+        <image name="discussion" width="30" height="30"/>
+        <image name="force" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
