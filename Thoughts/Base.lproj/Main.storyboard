@@ -186,6 +186,9 @@
                     <navigationItem key="navigationItem" title="Discussions" id="c2e-Rq-0hR">
                         <barButtonItem key="leftBarButtonItem" systemItem="trash" id="XRk-aI-WhY">
                             <color key="tintColor" red="0.99189028530000001" green="0.1620963047" blue="0.1235756344" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clear:" destination="Rzf-Yr-L7v" id="nwp-aW-mkp"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nyo-qe-WSy">
                             <connections>
@@ -310,11 +313,11 @@
             </objects>
             <point key="canvasLocation" x="1677" y="-228"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Discussions-->
         <scene sceneID="T3o-PI-nwO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DlD-GS-kJL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="74d-Ic-YUo"/>
+                    <tabBarItem key="tabBarItem" title="Discussions" image="discussion" id="74d-Ic-YUo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fSL-nw-Kp5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -349,6 +352,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="discussion" width="30" height="30"/>
         <image name="force" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
