@@ -1,22 +1,16 @@
 //
-//  FKFirstViewController.m
+//  FKDiscussionControllerViewController.m
 //  Retro
 //
-//  Created by Fredrik on 10/16/12.
+//  Created by Fredrik on 10/19/12.
 //  Copyright (c) 2012 Fredrik K. All rights reserved.
 //
 
-#import "FKLForcesController.h"
+#import "FKLDiscussionController.h"
 
+@implementation FKLDiscussionController
 
-@interface FKLForcesController ()
-
-@end
-
-@implementation FKLForcesController
-
-@synthesize managedObjectContext;
-@synthesize forces;
+@synthesize managedObjectContext = __managedObjectContext;
 
 - (void)viewDidLoad
 {
@@ -31,15 +25,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"AddForce"])
-	{
-		UINavigationController *navigationController = segue.destinationViewController;
-		FKLAddForceController *addForceController = [[navigationController viewControllers] objectAtIndex:0];
-		addForceController.delegate = self;
-        addForceController.managedObjectContext = self.managedObjectContext;
+    if ([segue.identifier isEqualToString:@"AddDiscussion"])
+    {
+		UINavigationController *navigationController =
+        segue.destinationViewController;
+		FKLAddDiscussionController *addDiscussionController = [[navigationController viewControllers] objectAtIndex:0];
+		addDiscussionController.delegate = self;
+        addDiscussionController.managedObjectContext = self.managedObjectContext;
 	}
 }
 
@@ -67,37 +61,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ForceCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DiscussionCell"];
     
-    Force *force = [self.forces objectAtIndex:indexPath.row];
-    UILabel *descriptionLabel = (UILabel *)[cell viewWithTag:100];
-	descriptionLabel.text = force.text;
-    UIImageView * forceTypeImageView = (UIImageView *)[cell viewWithTag:101];
-	forceTypeImageView.image = [self imageForRating:force.type];
+    Discussion *discussion = [self.discussions objectAtIndex:indexPath.row];
+    UILabel *descussionLabel = (UILabel *)[cell viewWithTag:100];
+	descussionLabel.text = discussion.discussion;
+    
 	return cell;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView
- numberOfRowsInSection:(NSInteger)section {
-    return [self.forces count];
-}
-
-- (UIImage *)imageForRating:(NSNumber*)forceType
-{
-	switch ([forceType integerValue])
-    {
-		case 0: return [UIImage imageNamed:@"good.png"];
-		case 1: return [UIImage imageNamed:@"bad.png"];
-	}
-	return nil;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.discussions count];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (editingStyle == UITableViewCellEditingStyleDelete)
 	{
-		Force *force = [self.forces objectAtIndex:indexPath.row];
-        [self.managedObjectContext deleteObject:force];
+		Discussion *discussion = [self.discussions objectAtIndex:indexPath.row];
+        [self.managedObjectContext deleteObject:discussion];
         NSError *error = nil;
         if ([self.managedObjectContext save:&error]) {
             [self performFetch];
@@ -108,12 +90,12 @@
 
 #pragma mark - FKAddForceControllerDelegate
 
-- (void)addForceControllerDidCancel:(FKLAddForceController *)controller
+- (void)addForceControllerDidCancel:(FKLAddDiscussionController *)controller
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)addForceControllerDidSave:(FKLAddForceController *)controller
+- (void)addForceControllerDidSave:(FKLAddDiscussionController *)controller
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
     [self performFetch];
@@ -125,10 +107,10 @@
 - (void)performFetch
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Force" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Discussion" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     NSError *error;
-    self.forces = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    self.discussions = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
 }
 
 @end

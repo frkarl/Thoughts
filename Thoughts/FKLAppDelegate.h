@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FKLForcesController.h"
+#import "FKLDiscussionController.h"
 
 @interface FKLAppDelegate : UIResponder <UIApplicationDelegate>
 

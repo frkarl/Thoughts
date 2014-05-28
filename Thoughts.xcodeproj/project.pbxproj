@@ -29,6 +29,8 @@
 		086344061933EC690038570D /* Force.m in Sources */ = {isa = PBXBuildFile; fileRef = 086344051933EC690038570D /* Force.m */; };
 		086344091933EC880038570D /* Discussion.m in Sources */ = {isa = PBXBuildFile; fileRef = 086344081933EC880038570D /* Discussion.m */; };
 		0863440D19353A860038570D /* FKLDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0863440C19353A860038570D /* FKLDataHandler.m */; };
+		0883DAAA19367676001FF256 /* FKLAddDiscussionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0883DAA719367676001FF256 /* FKLAddDiscussionController.m */; };
+		0883DAAB19367676001FF256 /* FKLDiscussionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0883DAA919367676001FF256 /* FKLDiscussionController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,10 @@
 		086344081933EC880038570D /* Discussion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Discussion.m; sourceTree = "<group>"; };
 		0863440B19353A860038570D /* FKLDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLDataHandler.h; sourceTree = "<group>"; };
 		0863440C19353A860038570D /* FKLDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLDataHandler.m; sourceTree = "<group>"; };
+		0883DAA619367676001FF256 /* FKLAddDiscussionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLAddDiscussionController.h; sourceTree = "<group>"; };
+		0883DAA719367676001FF256 /* FKLAddDiscussionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLAddDiscussionController.m; sourceTree = "<group>"; };
+		0883DAA819367676001FF256 /* FKLDiscussionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLDiscussionController.h; sourceTree = "<group>"; };
+		0883DAA919367676001FF256 /* FKLDiscussionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLDiscussionController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,10 @@
 				086343FE1933E21F0038570D /* FKLForcesController.m */,
 				086343FF1933E21F0038570D /* FKLAddForceController.h */,
 				086344001933E21F0038570D /* FKLAddForceController.m */,
+				0883DAA619367676001FF256 /* FKLAddDiscussionController.h */,
+				0883DAA719367676001FF256 /* FKLAddDiscussionController.m */,
+				0883DAA819367676001FF256 /* FKLDiscussionController.h */,
+				0883DAA919367676001FF256 /* FKLDiscussionController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -311,8 +321,10 @@
 				086343CD1933E0320038570D /* main.m in Sources */,
 				0863440D19353A860038570D /* FKLDataHandler.m in Sources */,
 				086343D71933E0320038570D /* FKLFirstViewController.m in Sources */,
+				0883DAAB19367676001FF256 /* FKLDiscussionController.m in Sources */,
 				086344091933EC880038570D /* Discussion.m in Sources */,
 				086344021933E21F0038570D /* FKLAddForceController.m in Sources */,
+				0883DAAA19367676001FF256 /* FKLAddDiscussionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

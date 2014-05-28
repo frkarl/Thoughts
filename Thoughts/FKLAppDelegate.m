@@ -30,11 +30,11 @@
                     FKLForcesController *myViewController = (FKLForcesController *)vc;
                     myViewController.managedObjectContext = self.managedObjectContext;
                 }
-                //else if ([vc isKindOfClass:[FKDiscussionController class]])
-                //{
-                //    FKDiscussionController *myViewController = (FKDiscussionController *)vc;
-                //    myViewController.managedObjectContext = self.managedObjectContext;
-                //}
+                else if ([vc isKindOfClass:[FKLDiscussionController class]])
+                {
+                    FKLDiscussionController *myViewController = (FKLDiscussionController *)vc;
+                    myViewController.managedObjectContext = self.managedObjectContext;
+                }
             }
         }
         
