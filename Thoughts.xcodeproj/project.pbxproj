@@ -14,8 +14,6 @@
 		086343CD1933E0320038570D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 086343CC1933E0320038570D /* main.m */; };
 		086343D11933E0320038570D /* FKLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 086343D01933E0320038570D /* FKLAppDelegate.m */; };
 		086343D41933E0320038570D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086343D21933E0320038570D /* Main.storyboard */; };
-		086343D71933E0320038570D /* FKLFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086343D61933E0320038570D /* FKLFirstViewController.m */; };
-		086343DA1933E0320038570D /* FKLSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086343D91933E0320038570D /* FKLSecondViewController.m */; };
 		086343DC1933E0320038570D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086343DB1933E0320038570D /* Images.xcassets */; };
 		086343E31933E0320038570D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086343E21933E0320038570D /* XCTest.framework */; };
 		086343E41933E0320038570D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086343C01933E0320038570D /* Foundation.framework */; };
@@ -55,10 +53,6 @@
 		086343CF1933E0320038570D /* FKLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKLAppDelegate.h; sourceTree = "<group>"; };
 		086343D01933E0320038570D /* FKLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKLAppDelegate.m; sourceTree = "<group>"; };
 		086343D31933E0320038570D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		086343D51933E0320038570D /* FKLFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKLFirstViewController.h; sourceTree = "<group>"; };
-		086343D61933E0320038570D /* FKLFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKLFirstViewController.m; sourceTree = "<group>"; };
-		086343D81933E0320038570D /* FKLSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKLSecondViewController.h; sourceTree = "<group>"; };
-		086343D91933E0320038570D /* FKLSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKLSecondViewController.m; sourceTree = "<group>"; };
 		086343DB1933E0320038570D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		086343E11933E0320038570D /* ThoughtsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThoughtsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		086343E21933E0320038570D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -147,10 +141,6 @@
 				086343CF1933E0320038570D /* FKLAppDelegate.h */,
 				086343D01933E0320038570D /* FKLAppDelegate.m */,
 				086343D21933E0320038570D /* Main.storyboard */,
-				086343D51933E0320038570D /* FKLFirstViewController.h */,
-				086343D61933E0320038570D /* FKLFirstViewController.m */,
-				086343D81933E0320038570D /* FKLSecondViewController.h */,
-				086343D91933E0320038570D /* FKLSecondViewController.m */,
 				086343FA1933E1530038570D /* Thoughts.xcdatamodeld */,
 				086343DB1933E0320038570D /* Images.xcassets */,
 				086343C71933E0320038570D /* Supporting Files */,
@@ -315,12 +305,10 @@
 			files = (
 				086343FC1933E1530038570D /* Thoughts.xcdatamodeld in Sources */,
 				086344061933EC690038570D /* Force.m in Sources */,
-				086343DA1933E0320038570D /* FKLSecondViewController.m in Sources */,
 				086344011933E21F0038570D /* FKLForcesController.m in Sources */,
 				086343D11933E0320038570D /* FKLAppDelegate.m in Sources */,
 				086343CD1933E0320038570D /* main.m in Sources */,
 				0863440D19353A860038570D /* FKLDataHandler.m in Sources */,
-				086343D71933E0320038570D /* FKLFirstViewController.m in Sources */,
 				0883DAAB19367676001FF256 /* FKLDiscussionController.m in Sources */,
 				086344091933EC880038570D /* Discussion.m in Sources */,
 				086344021933E21F0038570D /* FKLAddForceController.m in Sources */,
