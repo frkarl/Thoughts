@@ -11,5 +11,6 @@
 @interface FKLDataHandler : NSObject
 
 + (void)clearData:(NSManagedObjectContext*)managedObjectContext;
++ (NSArray*)performFetchForName: (NSString*) name withContext:(NSManagedObjectContext*)managedObjectContext;
 
 @end

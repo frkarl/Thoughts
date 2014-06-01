@@ -16,7 +16,7 @@
 {
     [super viewDidLoad];
 	
-    [self performFetch];
+    [FKLDataHandler performFetchForName:@"Discussion" withContext:self.managedObjectContext];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +52,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == actionSheet.destructiveButtonIndex) {
         [FKLDataHandler clearData:self.managedObjectContext];
-        [self performFetch];
+        [FKLDataHandler performFetchForName:@"Discussion" withContext:self.managedObjectContext];
         [self.tableView reloadData];
     }
 }
@@ -82,7 +82,7 @@
         [self.managedObjectContext deleteObject:discussion];
         NSError *error = nil;
         if ([self.managedObjectContext save:&error]) {
-            [self performFetch];
+            [FKLDataHandler performFetchForName:@"Discussion" withContext:self.managedObjectContext];
             [self.tableView reloadData];
         }
     }
@@ -98,19 +98,8 @@
 - (void)addForceControllerDidSave:(FKLAddDiscussionController *)controller
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
-    [self performFetch];
+    [FKLDataHandler performFetchForName:@"Discussion" withContext:self.managedObjectContext];
     [self.tableView reloadData];
-}
-
-#pragma mark - Unsorted
-
-- (void)performFetch
-{
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Discussion" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSError *error;
-    self.discussions = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
 }
 
 @end

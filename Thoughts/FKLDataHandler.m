@@ -28,4 +28,13 @@
     [managedObjectContext unlock];
 }
 
++ (NSArray*)performFetchForName: (NSString*) name withContext:(NSManagedObjectContext*)managedObjectContext
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:name inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    return [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+}
+
 @end
